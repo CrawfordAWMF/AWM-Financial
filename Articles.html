@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | AWM Financial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #3182ce;
+            --light: #edf2f7;
+            --dark: #1a202c;
+            --gold: #d4af37;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: white;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 54, 93, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        nav .logo span {
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .hero-small {
+            margin-top: 80px;
+            padding: 4rem 0 3rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+        }
+
+        .hero-small .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-small h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-small p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .articles-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .series-section {
+            margin-bottom: 4rem;
+        }
+
+        .series-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .series-header h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .series-header p {
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: var(--gold);
+        }
+
+        .article-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .article-card .subtitle {
+            font-size: 0.95rem;
+            color: var(--secondary);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .article-card .excerpt {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .article-card .read-more {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-card .read-more:hover {
+            color: var(--gold);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        footer .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #a0aec0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-small h1 {
+                font-size: 2rem;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">AWM <span>Financial</span></a>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#newsletter">Newsletter</a></li>
+                <li><a href="index.html#meetings">Beginner Money Meetings</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-small">
+        <div class="container">
+            <h1>Featured Articles</h1>
+            <p>In-depth financial education and real-world money insights</p>
+        </div>
+    </section>
+
+    <div class="articles-container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <!-- The Core Curriculum -->
+        <section class="series-section">
+            <div class="series-header">
+                <h2>The Core Curriculum</h2>
+                <p>Foundational money concepts that most people were never taught in school</p>
+            </div>
+            <div class="articles-grid">
+                <div class="article-card" onclick="window.location.href='article-coffee-money.html'">
+                    <h3>From Coffee Money to $1.5 Million</h3>
+                    <p class="subtitle">The Core Curriculum Part One</p>
+                    <p class="excerpt">How $25 a week can snowball into a fortune over time. Learn why investing isn't gambling, how indexing works, and the power of compounding to turn small weekly contributions into over $1.5 million by retirement.</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+
+                <div class="article-card" onclick="window.location.href='article-hold-cash.html'">
+                    <h3>Hold Cash the Smarter Way</h3>
+                    <p class="subtitle">The Core Curriculum Part 13</p>
+                    <p class="excerpt">How liquidity and cash equivalents shape your finances. Discover why your savings account's 0.01% is costing you hundreds of dollars and how high-yield accounts and money market funds can earn you over $1,000 in interest instead.</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spend & Save -->
+        <section class="series-section">
+            <div class="series-header">
+                <h2>Spend & Save</h2>
+                <p>Strategic approaches to managing everyday spending and building cash reserves</p>
+            </div>
+            <div class="articles-grid">
+                <div class="article-card" onclick="window.location.href='article-credit-card-chaos.html'">
+                    <h3>Credit Card Chaos</h3>
+                    <p class="subtitle">Visa platinum plus, gold elite maximum, 5X points and cashback categories galore!</p>
+                    <p class="excerpt">Understanding how credit card fees work and why choosing the right cards literally puts money back in your pocket. Learn how merchants pay billions in fees and how you can use this system to your advantage without incurring interest.</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+
+                <div class="article-card" onclick="window.location.href='article-rock-in-wallet.html'">
+                    <h3>There's a Rock in My Wallet!</h3>
+                    <p class="subtitle">How one unflashy card steadily fuels my entire financial strategy</p>
+                    <p class="excerpt">The Fidelity 2% Signature Visa anchors a complete financial system. Discover how unlimited 2% cashback deposited into a high-yield account creates a flywheel where spending earns rewards that flow back into investments earning over 10% annually.</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TCC: Stories Series -->
+        <section class="series-section">
+            <div class="series-header">
+                <h2>TCC: Stories Series</h2>
+                <p>Financial concepts brought to life through the journey of Cole and Hannah Morgan</p>
+            </div>
+            <div class="articles-grid">
+                <div class="article-card" onclick="window.location.href='article-first-small-choice.html'">
+                    <h3>The First Small Choice...</h3>
+                    <p class="subtitle">Stories Series Part One</p>
+                    <p class="excerpt">How a broke college couple accidentally did retirement right. Follow Cole and Hannah as they open their first Roth IRAs in college, watch $10 weekly contributions grow to over $32,000, and use the account to buy their first home—all while learning the power of starting early.</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+
+                <div class="article-card" onclick="window.location.href='article-future-secured.html'">
+                    <h3>...and the Future They Secured</h3>
+                    <p class="subtitle">Stories Series Part Two</p>
+                    <p class="excerpt">How the Morgans turned simple habits into long-term security. From medical emergencies to college expenses and catch-up contributions, see how their Roth IRAs grew to $2.5 million and funded Italian summers, grandkids visits, and a retirement spent giving back.</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Features -->
+        <section class="series-section">
+            <div class="series-header">
+                <h2>Special Features</h2>
+                <p>Unique insights on economics, local impact, and practical money-saving strategies</p>
+            </div>
+            <div class="articles-grid">
+                <div class="article-card" onclick="window.location.href='article-tsitp.html'">
+                    <h3>The Summer I Turned Pretty... Profitable?</h3>
+                    <p class="subtitle">Economics meets entertainment</p>
+                    <p class="excerpt">How Prime Video's beachside romance turned into a multimillion-dollar windfall for Wilmington's economy. Explore how $300 million in production spending created thousands of jobs, supported local businesses, and transformed a small coastal city into "Wilmywood."</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+
+                <div class="article-card" onclick="window.location.href='article-gas-part1.html'">
+                    <h3>Full Tank, Fuller Wallet</h3>
+                    <p class="subtitle">Gas Savings Part 1: How a Beat-Up Old Buick Beat Gas Prices</p>
+                    <p class="excerpt">After tracking every gas purchase for 365 days, discover how strategic timing, rewards programs, and newly opened stations helped save 25% compared to North Carolina's average—over $500 in savings from a 2006 Buick that hauled 14,000 miles.</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+
+                <div class="article-card" onclick="window.location.href='article-gas-part2.html'">
+                    <h3>Gas in the Tank, Cash in the Bank</h3>
+                    <p class="subtitle">Gas Savings Part 2: The Cashback Game</p>
+                    <p class="excerpt">Layering third-party rebates from apps like Upside ($62.43) with credit card cashback ($50+) and loyalty discounts ($50+) adds up to over $600 in total benefits. Learn how paying attention to all three layers turns routine gas purchases into significant savings that compound over time.</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>© 2025 AWM Financial LLC. All rights reserved. | Charlotte, North Carolina</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Educational content only. Not financial or investment advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
