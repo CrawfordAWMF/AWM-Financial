@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Chaos | AWM Financial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #3182ce;
+            --light: #edf2f7;
+            --dark: #1a202c;
+            --gold: #d4af37;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: white;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 54, 93, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        nav .logo span {
+            color: var(--gold);
+        }
+
+        .article-header {
+            margin-top: 80px;
+            padding: 4rem 0 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+        }
+
+        .article-header .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .article-meta {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .article-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-content ul {
+            margin: 1.5rem 0 1.5rem 2rem;
+            line-height: 1.8;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .article-content strong {
+            color: var(--primary);
+        }
+
+        .article-content em {
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+        }
+
+        .article-footer {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .article-footer h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .article-footer p {
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        footer .copyright {
+            color: #a0aec0;
+        }
+
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">AWM <span>Financial</span></a>
+        </div>
+    </nav>
+
+    <section class="article-header">
+        <div class="container">
+            <div class="article-meta">Spend & Save</div>
+            <h1>Credit Card Chaos</h1>
+            <p class="article-subtitle">Visa platinum plus, gold elite maximum, 5X points and cashback categories galore!</p>
+        </div>
+    </section>
+
+    <article class="article-content">
+        <a href="articles.html" class="back-link">← Back to Articles</a>
+
+        <p>We've all heard it. Samuel L. Jackson or Jennifer Garner asking, <em>"What's in your wallet?"</em> on TV or YouTube. It's a catchy Capital One slogan, but I take it seriously because choosing the right cards literally puts money back in my pocket. Here's what's in mine:</p>
+
+        <ul>
+            <li>The <strong>Discover It</strong> cashback card</li>
+            <li>Debit cards from <strong>PNC</strong> and <strong>Bank of America</strong></li>
+            <li>A <strong>Fidelity CMA debit card</strong></li>
+            <li>A <strong>Circle K gas card</strong> for fuel discounts</li>
+            <li>The <strong>Fidelity 2% Signature Visa</strong></li>
+            <li>And now, the <strong>PayPal cashback debit card</strong></li>
+        </ul>
+
+        <p>That may sound like overkill, but once you understand how this system works, you start to realize just how much money is on the table.</p>
+
+        <p>Every swipe of a card kicks off a chain of events. Merchants pay a fee, typically 2 to 3 percent, to accept credit cards, and to a lesser extent, debit cards as well. The card network (like Visa or Discover), the issuing bank, and a few back-end processors split that fee. With Discover, it's even simpler. They issue the card, lending me money directly, and run the network, so they keep both cuts. Then they hand me 1% cash back for using it, or 5% on a rotating quarterly category.</p>
+
+        <p>It adds up. Today at Lydia's Coffeehouse in New Hampshire (great Americano by the way!), I saw a sign that said they spend over $700 a month on credit card fees. And still, no surcharge, no minimum. That's how ubiquitous cards have become. A recent Wall Street Journal article noted that massive corporations, such as Walmart and Amazon, are developing their own cryptocurrencies to bypass the billions they pay in fees each year. Small shops, especially, can't afford to go cash-only, and they certainly don't have the resources to launch their own cryptocurrency. For now, businesses and consumers are stuck between the high fees of credit card networks and the lack of competitive payment alternatives, forced to play by the card companies' rules and hoping to come out ahead.</p>
+
+        <p>It's a messy and convoluted system, but as consumers, we can use it to our advantage. Understanding this complex system is just the first step. Over the next few weeks, I'll break down the cards I use, explain why I chose them, and show you how to build a wallet that earns rewards, builds credit, and never incurs interest, all while requiring minimal effort. No one needs to spend hours a week optimizing for travel points or triple blah blah blah.</p>
+
+        <p>Capital One asks, "What's in your wallet?"</p>
+
+        <p>Here's a better question.</p>
+
+        <p><strong>Do you know why it's there?</strong></p>
+
+        <p><em>Because if you don't, someone else definitely does, and they're making money off your confusion.</em></p>
+
+        <div class="article-footer">
+            <h3>Ready to Learn More?</h3>
+            <p>Explore more articles from Spend & Save and other series.</p>
+            <a href="articles.html" class="btn">View All Articles</a>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>© 2025 AWM Financial LLC. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Educational content only. Not financial or investment advice.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
