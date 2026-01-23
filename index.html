@@ -567,7 +567,7 @@
             <div class="series-grid-bottom">
                 <div class="series-card">
                     <h3>Watch Tower Wednesday</h3>
-                    <p>A biweekly reflection on faith, discipline, and the lifelong pursuit of wisdom, written by a young man striving to become more like Christ.</p>
+                    <p>A biweekly reflection on faith, discipline, and the lifelong pursuit of wisdom, written through the lens of a young man striving to become more like Christ.</p>
                 </div>
                 <div class="series-card">
                     <h3>The Capital Record</h3>
@@ -662,6 +662,7 @@
     </footer>
 
     <script>
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -675,6 +676,29 @@
             });
         });
 
+        // Mobile menu toggle
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navUl = document.querySelector('nav ul');
+        
+        if (mobileBtn && navUl) {
+            mobileBtn.addEventListener('click', function() {
+                if (navUl.style.display === 'flex') {
+                    navUl.style.display = 'none';
+                } else {
+                    navUl.style.display = 'flex';
+                    navUl.style.flexDirection = 'column';
+                    navUl.style.position = 'absolute';
+                    navUl.style.top = '100%';
+                    navUl.style.left = '0';
+                    navUl.style.right = '0';
+                    navUl.style.background = 'var(--primary)';
+                    navUl.style.padding = '1rem';
+                    navUl.style.gap = '1rem';
+                }
+            });
+        }
+
+        // Nav scroll effect
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
@@ -686,4 +710,5 @@
     </script>
 </body>
 </html>
+
 
