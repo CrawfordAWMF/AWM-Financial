@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWM Financial | Building Wealth Through Discipline & Compounding</title>
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -23,22 +22,21 @@
         }
 
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: var(--dark);
             overflow-x: hidden;
         }
 
-        /* ===== NAV ===== */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(26, 54, 93, 0.97);
+            background: rgba(26, 54, 93, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav .container {
@@ -46,19 +44,22 @@
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            position: relative;
+            gap: 2rem;
+        }
+
+        nav .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
 
         nav .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: white;
             letter-spacing: 1px;
-            text-decoration: none;
-            flex-shrink: 0;
-            z-index: 2;
         }
 
         nav .logo span {
@@ -70,57 +71,21 @@
             list-style: none;
             gap: 2rem;
             align-items: center;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
             transition: color 0.3s;
-            white-space: nowrap;
         }
 
         nav a:hover {
             color: var(--gold);
         }
 
-        .nav-socials {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-left: auto;
-            flex-shrink: 0;
-            z-index: 2;
-        }
-
-        .nav-socials a {
-            color: white;
-            display: flex;
-            align-items: center;
-            transition: color 0.3s;
-        }
-
-        .nav-socials a:hover {
-            color: var(--gold);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            margin-left: auto;
-        }
-
-        /* ===== HERO ===== */
         .hero {
-            margin-top: 72px;
+            margin-top: 80px;
             min-height: 90vh;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -137,18 +102,7 @@
             right: -20%;
             width: 800px;
             height: 800px;
-            background: rgba(255,255,255,0.04);
-            border-radius: 50%;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 600px;
-            height: 600px;
-            background: rgba(212, 175, 55, 0.05);
+            background: rgba(255,255,255,0.05);
             border-radius: 50%;
         }
 
@@ -160,30 +114,25 @@
             z-index: 1;
         }
 
-        .hero .tagline {
-            font-size: 1rem;
-            margin-bottom: 1.2rem;
-            color: var(--gold);
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.8rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.15;
-            max-width: 700px;
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+            font-weight: 600;
         }
 
         .hero p {
-            font-size: 1.15rem;
-            margin-bottom: 2.5rem;
-            max-width: 560px;
-            opacity: 0.88;
-            line-height: 1.75;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            opacity: 0.9;
         }
 
         .cta-buttons {
@@ -193,11 +142,10 @@
         }
 
         .btn {
-            padding: 0.9rem 2rem;
+            padding: 1rem 2rem;
             border: none;
             border-radius: 50px;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
@@ -212,25 +160,23 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
             color: white;
-            border: 2px solid rgba(255,255,255,0.7);
+            border: 2px solid white;
         }
 
         .btn-secondary:hover {
             background: white;
             color: var(--primary);
-            border-color: white;
         }
 
-        /* ===== STATS ===== */
         .stats {
             background: var(--light);
-            padding: 3.5rem 0;
+            padding: 3rem 0;
         }
 
         .stats .container {
@@ -238,28 +184,24 @@
             margin: 0 auto;
             padding: 0 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             text-align: center;
         }
 
         .stat-item h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--primary);
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
         }
 
         .stat-item p {
             color: var(--secondary);
             font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
         }
 
-        /* ===== ABOUT ===== */
         .about {
-            padding: 5.5rem 0;
+            padding: 5rem 0;
             background: white;
         }
 
@@ -270,50 +212,43 @@
         }
 
         .about-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             color: var(--primary);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
 
         .about-content p {
-            font-size: 1.08rem;
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
             color: #4a5568;
-            max-width: 780px;
-            line-height: 1.8;
         }
 
         .pillars {
             display: flex;
-            gap: 1.2rem;
-            margin-top: 2.5rem;
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
         .pillar {
             background: var(--light);
-            padding: 1.75rem;
-            border-radius: 12px;
+            padding: 1.5rem;
+            border-radius: 10px;
             flex: 1;
-            border-top: 3px solid var(--gold);
         }
 
         .pillar h4 {
             color: var(--primary);
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
             font-size: 1.1rem;
-            font-weight: 600;
         }
 
         .pillar p {
             font-size: 0.95rem;
             margin-bottom: 0;
-            color: #4a5568;
         }
 
-        /* ===== NEWSLETTER ===== */
         .newsletter-section {
-            padding: 5.5rem 0;
+            padding: 5rem 0;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
         }
@@ -325,24 +260,27 @@
         }
 
         .newsletter-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             text-align: center;
         }
 
         .newsletter-section > .container > p {
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 3rem;
-            opacity: 0.88;
+            opacity: 0.9;
         }
 
         .series-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .series-card:first-child {
+            grid-column: 1;
         }
 
         .series-grid-bottom {
@@ -357,7 +295,7 @@
             backdrop-filter: blur(10px);
             padding: 2rem;
             border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.2);
             transition: transform 0.3s;
         }
 
@@ -366,26 +304,23 @@
         }
 
         .series-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--primary);
             background: var(--gold);
             padding: 0.75rem 1rem;
             border-radius: 8px;
-            margin: -2rem -2rem 1.2rem -2rem;
+            margin: -2rem -2rem 1rem -2rem;
         }
 
         .series-card p {
             text-align: left;
             font-size: 1rem;
             margin-bottom: 0;
-            line-height: 1.7;
-            opacity: 0.92;
         }
 
-        /* ===== SERVICES ===== */
         .services {
-            padding: 5.5rem 0;
+            padding: 5rem 0;
             background: white;
         }
 
@@ -396,8 +331,7 @@
         }
 
         .services h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             color: var(--primary);
             text-align: center;
             margin-bottom: 1rem;
@@ -405,24 +339,22 @@
 
         .services-intro {
             text-align: center;
-            font-size: 1.08rem;
+            font-size: 1.1rem;
             color: #4a5568;
             margin-bottom: 3rem;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.75;
         }
 
         .service-card {
             background: var(--light);
             padding: 2.5rem;
             border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
 
         .service-card h3 {
-            font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             color: var(--primary);
             margin-bottom: 1rem;
@@ -435,7 +367,12 @@
             margin-bottom: 1.5rem;
         }
 
-        .service-card .price,
+        .service-card .price {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
         .service-card .student-price {
             font-size: 1.3rem;
             color: var(--secondary);
@@ -461,7 +398,6 @@
             padding: 0.5rem 0;
             padding-left: 1.5rem;
             position: relative;
-            color: #4a5568;
         }
 
         .service-card li:before {
@@ -472,59 +408,10 @@
             font-weight: bold;
         }
 
-        /* ===== CONTACT ===== */
-        .contact-section {
-            padding: 5.5rem 0;
-            background: var(--light);
-        }
-
-        .contact-section .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .contact-section p {
-            font-size: 1.08rem;
-            color: #4a5568;
-            margin-bottom: 0.75rem;
-        }
-
-        .contact-section a {
-            color: var(--accent);
-        }
-
-        .contact-socials {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin: 1.75rem 0;
-        }
-
-        .contact-socials a {
-            color: var(--accent);
-            font-size: 1.8rem;
-            transition: color 0.3s;
-            display: flex;
-        }
-
-        .contact-socials a:hover {
-            color: var(--gold);
-        }
-
-        /* ===== FOOTER ===== */
         footer {
             background: var(--dark);
             color: white;
-            padding: 3rem 0 1.5rem;
+            padding: 3rem 0 1rem;
         }
 
         footer .container {
@@ -535,22 +422,14 @@
 
         footer .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
             margin-bottom: 2rem;
         }
 
         footer h4 {
-            font-family: 'Playfair Display', serif;
             color: var(--gold);
             margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        footer p {
-            color: #a0aec0;
-            font-size: 0.95rem;
-            line-height: 1.7;
         }
 
         footer a {
@@ -559,10 +438,45 @@
             display: block;
             margin-bottom: 0.5rem;
             transition: color 0.3s;
-            font-size: 0.95rem;
         }
 
         footer a:hover {
+            color: var(--gold);
+        }
+
+        footer .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #a0aec0;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a:hover {
             color: var(--gold);
         }
 
@@ -570,12 +484,12 @@
             display: flex;
             gap: 1.5rem;
             justify-content: center;
-            margin: 2rem 0 1.5rem;
+            margin: 2rem 0;
         }
 
         .footer-socials a {
             color: #a0aec0;
-            display: flex;
+            font-size: 1.5rem;
             transition: color 0.3s;
         }
 
@@ -583,16 +497,24 @@
             color: var(--gold);
         }
 
-        footer .copyright {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            color: #a0aec0;
-            font-size: 0.9rem;
+        .contact-socials {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 900px) {
+        .contact-socials a {
+            color: var(--accent);
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+
+        .contact-socials a:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
             nav ul {
                 display: none;
             }
@@ -600,64 +522,72 @@
             .mobile-menu-btn {
                 display: block;
             }
-        }
 
-        @media (max-width: 768px) {
+            nav .social-links {
+                display: flex;
+                gap: 0.75rem;
+            }
+
+            nav .social-links a {
+                font-size: 1rem;
+            }
+
             .hero h1 {
-                font-size: 2.6rem;
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .about .container {
+                grid-template-columns: 1fr;
             }
 
             .pillars {
                 flex-direction: column;
             }
-
-            .series-grid-bottom {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
 <body>
-
-    <!-- NAV -->
     <nav>
         <div class="container">
             <a href="index.html" class="logo">AWM <span>Financial</span></a>
-
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
-                <li><a href="#meetings">Beginner Money Meetings</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <div class="nav-socials">
-                <a href="https://www.linkedin.com/company/awmfinancial" target="_blank" aria-label="LinkedIn">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-                <a href="https://www.instagram.com/awmfinancialnewsletter/" target="_blank" aria-label="Instagram">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
-                <a href="https://www.youtube.com/@AWM_FINANCIAL" target="_blank" aria-label="YouTube">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61588290865881" target="_blank" aria-label="Facebook">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                </a>
-                <a href="https://crawfordanderson.substack.com/" target="_blank" aria-label="Substack">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-                </a>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="#meetings">Beginner Money Meetings</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/awmfinancial" target="_blank" aria-label="LinkedIn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/awmfinancialnewsletter/" target="_blank" aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@AWM_FINANCIAL" target="_blank" aria-label="YouTube">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61588290865881" target="_blank" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="https://crawfordanderson.substack.com/" target="_blank" aria-label="Substack">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                    </a>
+                </div>
                 <button class="mobile-menu-btn">☰</button>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="tagline">Wealth &bull; Wisdom &bull; Habits</div>
+                <div class="tagline">Wealth • Wisdom • Habits</div>
                 <h1>Financial Clarity for the Next Generation</h1>
                 <p>Practical money guidance for students and young adults navigating saving, investing, and long-term wealth building.</p>
                 <div class="cta-buttons">
@@ -668,7 +598,6 @@
         </div>
     </section>
 
-    <!-- STATS -->
     <section class="stats">
         <div class="container">
             <div class="stat-item">
@@ -690,13 +619,13 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
                 <h2>About AWM Financial</h2>
                 <p>Crawford Anderson is the founder of AWM Financial. A finance major at UNC Charlotte, he combines formal education with hands-on experience managing his own investment portfolios, building disciplined saving systems, and applying long-term financial strategy.</p>
                 <p>Crawford started AWM Financial with a simple goal: make money make sense. After seeing how little practical financial education exists for students and young adults, he set out to build a clear, accessible resource for the next generation.</p>
+                
                 <div class="pillars">
                     <div class="pillar">
                         <h4>Wealth</h4>
@@ -715,12 +644,11 @@
         </div>
     </section>
 
-    <!-- NEWSLETTER -->
     <section class="newsletter-section" id="newsletter">
         <div class="container">
             <h2>The AWM Financial Newsletter</h2>
             <p>Published twice weekly, exploring how discipline and compounding shape long-term financial behavior.</p>
-
+            
             <div class="series-grid">
                 <div class="series-card">
                     <h3>The Core Curriculum</h3>
@@ -741,21 +669,20 @@
             <div style="text-align: center; margin-top: 2rem;">
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; align-items: center;">
                     <a href="https://crawfordanderson.substack.com/" target="_blank" class="btn btn-primary">Subscribe Free on Substack</a>
-                    <a href="articles.html" class="btn btn-secondary">View Featured Articles</a>
+                    <a href="articles.html" class="btn btn-primary" style="background: transparent; color: white; border: 2px solid white;">View Featured Articles</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
     <section class="services" id="meetings">
         <div class="container">
             <h2>Beginner Money Meetings</h2>
             <p class="services-intro">One-on-one educational conversations designed to help students and young adults better understand how money works.</p>
-
+            
             <div class="service-card">
-                <p style="margin-bottom: 1.5rem; color: #4a5568; line-height: 1.75;">These sessions focus on explaining core concepts like budgeting, saving, credit, and investing fundamentals, with an emphasis on clarity and confidence. Meetings are educational in nature and do not include personalized recommendations or financial advice.</p>
-
+                <p style="margin-bottom: 1.5rem;">These sessions focus on explaining core concepts like budgeting, saving, credit, and investing fundamentals, with an emphasis on clarity and confidence. Meetings are educational in nature and do not include personalized recommendations or financial advice.</p>
+                
                 <div class="pricing-row">
                     <span class="price">$50</span>
                     <span style="color: #cbd5e0; margin: 0 0.5rem;">/</span>
@@ -766,50 +693,52 @@
                     <strong>Important:</strong> This is educational content only. Not financial or investment advice.
                 </div>
 
-                <h4 style="color: var(--primary); margin-bottom: 1rem; font-weight: 600;">What's included:</h4>
+                <h4 style="color: var(--primary); margin-bottom: 1rem;">What's included:</h4>
                 <ul>
                     <li>One-hour personalized education session</li>
-                    <li>Budgeting strategy &amp; setup</li>
-                    <li>Savings &amp; early investing fundamentals</li>
+                    <li>Budgeting strategy & setup</li>
+                    <li>Savings & early investing fundamentals</li>
                     <li>Credit cards and credit scores explained</li>
                     <li>An in-depth look at Crawford's personal portfolio and decision-making process</li>
                     <li>Time for questions and clarifications</li>
                     <li>Follow-up support included</li>
                 </ul>
-                <a href="https://forms.gle/ufkTpFg1thK87y4s6" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;">Book a Meeting</a>
+                <a href="https://forms.gle/ufkTpFg1thK87y4s6" target="_blank" class="btn btn-primary" style="width: 100%;">Book a Meeting</a>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Questions about AWM Financial? Crawford would be glad to hear from you.</p>
-            <p><strong>Email:</strong> <a href="mailto:crawford@awmfinancial.net">crawford@awmfinancial.net</a></p>
-            <p><strong>Location:</strong> Charlotte, North Carolina</p>
-            <div class="contact-socials">
-                <a href="https://www.linkedin.com/company/awmfinancial" target="_blank" aria-label="LinkedIn">
-                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-                <a href="https://www.instagram.com/awmfinancialnewsletter/" target="_blank" aria-label="Instagram">
-                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
-                <a href="https://www.youtube.com/@AWM_FINANCIAL" target="_blank" aria-label="YouTube">
-                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61588290865881" target="_blank" aria-label="Facebook">
-                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                </a>
-                <a href="https://crawfordanderson.substack.com/" target="_blank" aria-label="Substack">
-                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-                </a>
+    <section class="about" id="contact" style="background: var(--light);">
+        <div class="container" style="grid-template-columns: 1fr;">
+            <div class="about-content" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2>Get In Touch</h2>
+                <p>Questions about AWM Financial? Crawford would be glad to hear from you.</p>
+                <p><strong>Email:</strong> <a href="mailto:crawford@awmfinancial.net" style="color: var(--accent);">crawford@awmfinancial.net</a></p>
+                <p><strong>Location:</strong> Charlotte, North Carolina</p>
+                <div class="contact-socials">
+                    <a href="https://www.linkedin.com/company/awmfinancial" target="_blank" aria-label="LinkedIn">
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/awmfinancialnewsletter/" target="_blank" aria-label="Instagram">
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@AWM_FINANCIAL" target="_blank" aria-label="YouTube">
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61588290865881" target="_blank" aria-label="Facebook">
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="https://crawfordanderson.substack.com/" target="_blank" aria-label="Substack">
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                    </a>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="mailto:crawford@awmfinancial.net" class="btn btn-primary">Contact Crawford</a>
+                </div>
             </div>
-            <a href="mailto:crawford@awmfinancial.net" class="btn btn-primary">Contact Crawford</a>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -830,25 +759,25 @@
                 </div>
                 <div>
                     <h4>Legal</h4>
-                    <p>Educational content only. Not financial or investment advice.</p>
-                    <p style="margin-top: 0.5rem;">© 2025 AWM Financial LLC. All rights reserved.</p>
+                    <p style="font-size: 0.9rem; color: #a0aec0;">Educational content only. Not financial or investment advice.</p>
+                    <p style="font-size: 0.9rem; color: #a0aec0;">© 2025 AWM Financial LLC. All rights reserved.</p>
                 </div>
             </div>
             <div class="footer-socials">
                 <a href="https://www.linkedin.com/company/awmfinancial" target="_blank" aria-label="LinkedIn">
-                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
                 <a href="https://www.instagram.com/awmfinancialnewsletter/" target="_blank" aria-label="Instagram">
-                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
                 <a href="https://www.youtube.com/@AWM_FINANCIAL" target="_blank" aria-label="YouTube">
-                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=61588290865881" target="_blank" aria-label="Facebook">
-                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
                 </a>
                 <a href="https://crawfordanderson.substack.com/" target="_blank" aria-label="Substack">
-                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
                 </a>
             </div>
             <div class="copyright">
@@ -860,11 +789,14 @@
     <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
@@ -872,7 +804,7 @@
         // Mobile menu toggle
         const mobileBtn = document.querySelector('.mobile-menu-btn');
         const navUl = document.querySelector('nav ul');
-
+        
         if (mobileBtn && navUl) {
             mobileBtn.addEventListener('click', function() {
                 if (navUl.style.display === 'flex') {
@@ -887,7 +819,6 @@
                     navUl.style.background = 'var(--primary)';
                     navUl.style.padding = '1rem';
                     navUl.style.gap = '1rem';
-                    navUl.style.transform = 'none';
                 }
             });
         }
@@ -895,9 +826,11 @@
         // Nav scroll effect
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
-            nav.style.background = window.scrollY > 100
-                ? 'rgba(26, 54, 93, 0.99)'
-                : 'rgba(26, 54, 93, 0.97)';
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(26, 54, 93, 0.98)';
+            } else {
+                nav.style.background = 'rgba(26, 54, 93, 0.95)';
+            }
         });
     </script>
 </body>
