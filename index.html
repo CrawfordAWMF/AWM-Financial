@@ -75,16 +75,10 @@
             list-style: none;
             gap: 2rem;
             align-items: center;
-            display: none;
-        }
-
-        @media (min-width: 769px) {
-            nav ul {
-                display: flex;
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-            }
+            display: flex;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         nav a {
@@ -530,7 +524,7 @@
 
         @media (max-width: 768px) {
             nav ul {
-                display: none;
+                display: none !important;
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -543,7 +537,7 @@
             }
 
             nav ul.mobile-open {
-                display: flex;
+                display: flex !important;
             }
 
             .mobile-menu-btn {
@@ -839,3 +833,4 @@
 
         // Nav scroll effect
         window.addEventListener('scroll', function() {
+
