@@ -525,6 +525,19 @@
         @media (max-width: 768px) {
             nav ul {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: var(--primary);
+                padding: 1rem;
+                gap: 1rem;
+                transform: none;
+            }
+
+            nav ul.mobile-open {
+                display: flex;
             }
 
             .mobile-menu-btn {
@@ -810,19 +823,10 @@
         
         if (mobileBtn && navUl) {
             mobileBtn.addEventListener('click', function() {
-                if (navUl.style.display === 'flex') {
-                    navUl.style.display = 'none';
+                if (navUl.classList.contains('mobile-open')) {
+                    navUl.classList.remove('mobile-open');
                 } else {
-                    navUl.style.display = 'flex';
-                    navUl.style.flexDirection = 'column';
-                    navUl.style.position = 'absolute';
-                    navUl.style.top = '100%';
-                    navUl.style.left = '0';
-                    navUl.style.right = '0';
-                    navUl.style.background = 'var(--primary)';
-                    navUl.style.padding = '1rem';
-                    navUl.style.gap = '1rem';
-                    navUl.style.transform = 'none';
+                    navUl.classList.add('mobile-open');
                 }
             });
         }
