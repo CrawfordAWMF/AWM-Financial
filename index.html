@@ -76,9 +76,14 @@
             list-style: none;
             gap: 2rem;
             align-items: center;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+        }
+
+        @media (min-width: 769px) {
+            nav ul {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
 
         nav a {
@@ -833,3 +838,7 @@
 
         // Nav scroll effect
         window.addEventListener('scroll', function() {
+
+        // Nav scroll effect
+        window.addEventListener('scroll', function() {
+
