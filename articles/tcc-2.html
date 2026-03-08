@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Investors Should Just Buy the S&P 500 | AWM Financial</title>
+    <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #3182ce;
+            --light: #edf2f7;
+            --dark: #1a202c;
+            --gold: #d4af37;
+        }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: white;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 54, 93, 0.97);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+            text-decoration: none;
+            flex-shrink: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        nav .logo span { color: var(--gold); }
+
+        nav .nav-links {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            white-space: nowrap;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        nav .nav-links a:hover { color: var(--gold); }
+        nav .nav-links a.active { color: var(--gold); }
+
+        .nav-socials {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .nav-socials a {
+            color: white;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .nav-socials a:hover { color: var(--gold); }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            line-height: 1;
+            margin-left: auto;
+        }
+
+        @media (max-width: 768px) {
+            nav .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0; right: 0;
+                flex-direction: column;
+                align-items: flex-start;
+                background: var(--primary);
+                padding: 1rem 2rem;
+                gap: 1rem;
+            }
+            nav .nav-links.open { display: flex; }
+            .nav-socials { display: none; }
+            .mobile-menu-btn { display: block; }
+        }
+
+        /* ── ARTICLE HEADER ── */
+        .article-header {
+            margin-top: 68px;
+            background: linear-gradient(160deg, var(--primary) 0%, #0f2340 100%);
+            color: white;
+            padding: 4rem 0 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(212,175,55,0.03) 80px, rgba(212,175,55,0.03) 81px),
+                repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(212,175,55,0.03) 80px, rgba(212,175,55,0.03) 81px);
+        }
+
+        .article-header .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.75rem;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover { color: var(--gold); }
+
+        .article-tag {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(212,175,55,0.4);
+            padding: 0.3rem 0.8rem;
+            border-radius: 2px;
+            margin-bottom: 1.25rem;
+        }
+
+        .article-header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            opacity: 0.65;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* ── ARTICLE BODY ── */
+        .article-body {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 5rem;
+        }
+
+        .article-body p {
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            line-height: 1.85;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+            line-height: 1.25;
+        }
+
+        .article-body a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .article-body a:hover { color: var(--gold); }
+
+        /* ── IMAGE CAPTION ── */
+        .article-image {
+            margin: 2rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--light);
+        }
+
+        .image-caption {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.82rem;
+            color: #a0aec0;
+            padding: 0.6rem 0;
+            font-style: italic;
+        }
+
+        /* ── HIGHLIGHT BOX ── */
+        .highlight-box {
+            background: var(--primary);
+            color: white;
+            border-radius: 10px;
+            padding: 1.75rem 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .highlight-box p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 0;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box strong {
+            color: var(--gold);
+        }
+
+        /* ── DISCLAIMER ── */
+        .disclaimer {
+            background: var(--light);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 6px 6px 0;
+            padding: 1.25rem 1.5rem;
+            margin-top: 3rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.88rem;
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        /* ── CONTACT CTA ── */
+        .contact-cta {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+
+        .contact-cta a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-cta a:hover { color: var(--gold); }
+
+        /* ── NAV BETWEEN ARTICLES ── */
+        .article-nav {
+            border-top: 2px solid var(--light);
+            padding-top: 2.5rem;
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .article-nav a {
+            display: flex;
+            flex-direction: column;
+            background: var(--light);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            text-decoration: none;
+            transition: all 0.25s;
+            border: 1px solid transparent;
+        }
+
+        .article-nav a:hover {
+            border-color: var(--gold);
+            background: white;
+            box-shadow: 0 4px 16px rgba(26,54,93,0.08);
+        }
+
+        .article-nav a.prev { align-items: flex-start; }
+        .article-nav a.next { align-items: flex-end; text-align: right; }
+
+        .nav-label {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #a0aec0;
+            margin-bottom: 0.4rem;
+        }
+
+        .nav-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 600px) {
+            .article-header h1 { font-size: 2.2rem; }
+            .article-nav { grid-template-columns: 1fr; }
+            .article-nav a.next { align-items: flex-start; text-align: left; }
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        footer .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        footer h4 { color: var(--gold); margin-bottom: 1rem; }
+
+        footer a {
+            color: #a0aec0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        footer a:hover { color: var(--gold); }
+
+        .footer-socials {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .footer-socials a {
+            color: #a0aec0;
+            display: inline-flex;
+            transition: color 0.3s;
+        }
+
+        .footer-socials a:hover { color: var(--gold); }
+
+        footer .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo">AWM <span>Financial</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../core-curriculum.html" class="active">The Core Curriculum</a></li>
+                <li><a href="../index.html#meetings">Beginner Money Meetings</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-socials">
+                <a href="https://www.linkedin.com/company/awmfinancial" target="_blank" aria-label="LinkedIn">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/awmfinancialnewsletter/" target="_blank" aria-label="Instagram">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@AWM_FINANCIAL" target="_blank" aria-label="YouTube">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61588290865881" target="_blank" aria-label="Facebook">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                </a>
+                <a href="https://crawfordanderson.substack.com/" target="_blank" aria-label="Substack">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="container">
+            <a href="../core-curriculum.html" class="back-link">← The Core Curriculum</a>
+            <div class="article-tag">Core Curriculum · TCC-2</div>
+            <h1>Most Investors Should Just Buy the S&P 500</h1>
+            <p class="article-subtitle">How a century of 10% returns builds wealth.</p>
+            <div class="article-meta">
+                <span>By Crawford Anderson</span>
+                <span>·</span>
+                <span>AWM Financial</span>
+            </div>
+        </div>
+    </header>
+
+    <article class="article-body">
+
+        <p>When you walk into the South Village dining hall at UNC Charlotte for dinner, you're hit with an overwhelming number of choices. The homestyle hot buffet, the grill stacked with protein, the fresh salad station, and of course, the endless pizza. Last time in <a href="tcc-1.html">From Coffee Money to $1.5 Million</a> we talked about skipping a latte and investing your coffee dollars instead. Here's the twist: the S&P 500 isn't one flavor of coffee. It's the entire café menu plus the buffet line. There's something for everyone. The index isn't just one food group; it's the buffet of the American economy.</p>
+
+        <h2>Time in the Market Wins</h2>
+
+        <p>For the past 100 years, the index has returned an average of 10% annually. The longer you hold, the higher your chances of beating even the most professionally managed funds. Volatility and uncertainty are baked into the recipe, and there will be both good and bad years.</p>
+
+        <p>However, the market tends to stabilize around that 10% return, which is how it's earned its reputation as the benchmark investors aim to beat. The old saying, "If you can't beat 'em, join 'em," rings true here, since most investors, professional or not, struggle to beat the benchmark; the smarter move is often to buy the overall market instead. If your investments don't outperform the index, your assets should offer more stability in exchange for lower returns; otherwise, you're just holding onto a dud.</p>
+
+        <h2>How the Sausage Gets Made</h2>
+
+        <p>The S&P 500 is market-cap weighted (based on each company's total market value), meaning larger companies occupy a larger share of the index. In 2025, Apple, Microsoft, Nvidia, Google, and Amazon make up roughly 30% while the other 495 companies fill in the remaining 70%.</p>
+
+        <p>Standard & Poor's, the creator and maintainer of the index, reviews the list every quarter to make sure it stays proportional and reflective of the U.S. economy. Not just any company can slide underneath the glass-encased buffet display.</p>
+
+        <p>To qualify, a business has to be U.S.-based, profitable for four straight quarters, and big — at least $20 billion in market cap. The committee also looks at the bigger picture: does the index still represent America's economy? When it doesn't, they rotate the menu. In the 2000s, Blockbuster and Sears were ousted, while Meta (then known as Facebook) and Visa stepped in; digital giants displaced legacy retail.</p>
+
+        <h2>The Five That Drive Profits</h2>
+
+        <p>The most prominent companies in the index generate hundreds of billions in profit each year. Apple sells hardware and software you use every day. Microsoft runs Windows, Office, and Azure, the backbone of thousands of businesses and websites. Google dominates the internet through its search ads and YouTube services, while its data center division continues to expand. Amazon is both a retail monster and a cloud computing powerhouse through Amazon Web Services. Nvidia designs the semiconductor chips powering everything from gaming rigs to AI servers — and sells them to nearly every other large company.</p>
+
+        <p>Just five names, yet they show why owning these corporations has been such a consistent wealth builder. Instead of being limited to one food group at the dining hall, consider grabbing an ETF like SPYM or VOO to instantly own all 500 of America's most profitable companies.</p>
+
+        <div class="contact-cta">
+            Got questions, disagreements, or a money topic you want broken down next? Shoot an email to <a href="mailto:crawford@awmfinancial.net">Crawford@awmfinancial.net</a> or visit <a href="https://awmfinancial.net">awmfinancial.net</a>.
+        </div>
+
+        <div class="disclaimer">
+            This content is for educational purposes only and is not investment advice. Markets are risky, outcomes vary, and you should always make decisions based on your own situation.
+        </div>
+
+        <div class="article-nav">
+            <a href="tcc-1.html" class="prev">
+                <div class="nav-label">← Previous</div>
+                <div class="nav-title">From Coffee Money to $1.5 Million</div>
+            </a>
+            <a href="tcc-3.html" class="next">
+                <div class="nav-label">Next →</div>
+                <div class="nav-title">Time is Your Greatest Asset</div>
+            </a>
+        </div>
+
+    </article>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>AWM Financial</h4>
+                    <p style="color: #a0aec0; font-size: 0.9rem;">Educational content focused on money, discipline, and long-term thinking.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../core-curriculum.html">The Core Curriculum</a>
+                    <a href="../index.html#meetings">Beginner Money Meetings</a>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <a href="../index.html#contact">Contact</a>
+                    <a href="https://crawfordanderson.substack.com/" target="_blank">Substack Newsletter</a>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <p style="font-size: 0.85rem; color: #a0aec0;">Educational content only. Not financial or investment advice.</p>
+                    <p style="font-size: 0.85rem; color: #a0aec0; margin-top: 0.5rem;">© 2025 AWM Financial LLC. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/awmfinancial" target="_blank" aria-label="LinkedIn">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/awmfinancialnewsletter/" target="_blank" aria-label="Instagram">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@AWM_FINANCIAL" target="_blank" aria-label="YouTube">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61588290865881" target="_blank" aria-label="Facebook">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                </a>
+                <a href="https://crawfordanderson.substack.com/" target="_blank" aria-label="Substack">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>Charlotte, North Carolina</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('open');
+        });
+
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            nav.style.background = window.scrollY > 100
+                ? 'rgba(26, 54, 93, 0.99)'
+                : 'rgba(26, 54, 93, 0.97)';
+        });
+    </script>
+
+</body>
+</html>
