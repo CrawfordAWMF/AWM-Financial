@@ -307,6 +307,69 @@
             margin-bottom: 0;
         }
 
+        /* ── PODCAST ── */
+        .podcast-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 5rem 2rem;
+        }
+
+        .podcast-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .podcast-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .podcast-text h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .podcast-text p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .podcast-video {
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 9/16;
+            max-height: 480px;
+            background: #000;
+            margin: 0 auto;
+        }
+
+        .podcast-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .podcast-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .podcast-text h2 { font-size: 1.8rem; }
+            .podcast-video { max-height: 340px; }
+        }
+
         /* ── NEWSLETTER ── */
         .newsletter-section {
             padding: 5rem 0;
@@ -660,6 +723,21 @@
                     </div>
                     <a href="team.html" class="btn btn-primary">Meet the Team →</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="podcast-section" id="podcast">
+        <div class="podcast-inner">
+            <div class="podcast-text">
+                <h2>The Core Curriculum Show</h2>
+                <p>Hosted by Crawford Anderson and Thomas Wong, The Core Curriculum Show breaks down foundational money concepts in a way that actually makes sense for students and young adults. Straightforward conversations on the money topics you should have been taught.</p>
+                <a href="https://www.youtube.com/@AWM_FINANCIAL" target="_blank" class="btn btn-primary">Watch Full Episodes on YouTube</a>
+            </div>
+            <div class="podcast-video">
+                <video autoplay muted loop playsinline>
+                    <source src="Fast_Facts__1.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </section>
