@@ -56,13 +56,14 @@
         .contact-cta { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.5rem 2rem; margin: 2.5rem 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.95rem; color: #4a5568; }
         .contact-cta a { color: var(--accent); text-decoration: none; font-weight: 600; }
         .contact-cta a:hover { color: var(--gold); }
-        .next-article { border-top: 2px solid var(--light); padding-top: 2.5rem; margin-top: 3rem; }
-        .next-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #a0aec0; margin-bottom: 0.75rem; }
-        .next-card { display: flex; align-items: center; justify-content: space-between; background: var(--light); border-radius: 8px; padding: 1.25rem 1.5rem; text-decoration: none; transition: all 0.25s; border: 1px solid transparent; }
-        .next-card:hover { border-color: var(--gold); background: white; box-shadow: 0 4px 16px rgba(26,54,93,0.08); }
-        .next-card-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; color: var(--primary); font-weight: 700; }
-        .next-card-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.85rem; color: #718096; margin-top: 0.2rem; }
-        .next-arrow { color: var(--gold); font-size: 1.4rem; flex-shrink: 0; margin-left: 1rem; }
+        .article-nav { border-top: 2px solid var(--light); padding-top: 2.5rem; margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .article-nav a { display: flex; flex-direction: column; background: var(--light); border-radius: 8px; padding: 1.25rem 1.5rem; text-decoration: none; transition: all 0.25s; border: 1px solid transparent; }
+        .article-nav a:hover { border-color: var(--gold); background: white; box-shadow: 0 4px 16px rgba(26,54,93,0.08); }
+        .article-nav a.prev { align-items: flex-start; }
+        .article-nav a.next { align-items: flex-end; text-align: right; }
+        .nav-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #a0aec0; margin-bottom: 0.4rem; }
+        .nav-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; color: var(--primary); font-weight: 700; line-height: 1.3; }
+        @media (max-width: 600px) { .article-header h1 { font-size: 2.2rem; } .article-nav { grid-template-columns: 1fr; } .article-nav a.next { align-items: flex-start; text-align: left; } }
         footer { background: var(--dark); color: white; padding: 3rem 0 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
         footer .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         footer .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
@@ -96,19 +97,19 @@
                 <a href="https://www.facebook.com/profile.php?id=61588290865881" target="_blank" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
                 <a href="https://crawfordanderson.substack.com/" target="_blank" aria-label="Substack"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
             </div>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">&#9776;</button>
         </div>
     </nav>
 
     <header class="article-header">
         <div class="container">
-            <a href="../core-curriculum.html" class="back-link">← The Core Curriculum</a>
-            <div class="article-tag">Core Curriculum · TCC-4</div>
+            <a href="../core-curriculum.html" class="back-link">&#8592; The Core Curriculum</a>
+            <div class="article-tag">Core Curriculum &middot; TCC-4</div>
             <h1>Time is Your Greatest Asset</h1>
             <p class="article-subtitle">How compounding transforms time into wealth.</p>
             <div class="article-meta">
                 <span>By Crawford Anderson</span>
-                <span>·</span>
+                <span>&middot;</span>
                 <span>AWM Financial</span>
             </div>
         </div>
@@ -120,25 +121,25 @@
 
         <p>Today, my Apple Watch has over two million times the computing power used to land on the Moon. Decades of steady compounding turned room-sized computers into something that fits on my wrist. The same principle can also make time work for you.</p>
 
-        <p>Last time in <a href="tcc-2.html">Most Investors Should Just Buy the S&P 500</a>, we piled your ceramic plate high with a diverse menu, ranging from new-age stir-fry to old-school lasagna, and discussed the differences between America's three major stock indexes. This week, we're talking about the seasoning and secret sauce that bring the entire dish together: compounding.</p>
+        <p>Last time in <a href="tcc-3.html">S&amp;P 500, Dow, Nasdaq: What&rsquo;s the Difference?</a>, we piled your ceramic plate high with a diverse menu, ranging from new-age stir-fry to old-school lasagna, and discussed the differences between America&rsquo;s three major stock indexes. This week, we&rsquo;re talking about the seasoning and secret sauce that bring the entire dish together: compounding.</p>
 
         <h2>What Is It?</h2>
 
         <p>Often called the eighth wonder of the world, compounding is the process of reinvesting earnings, such as interest or company profits, so that they generate their own earnings. It creates a snowball effect where money grows on top of itself and accelerates over time.</p>
 
-        <p>Your dollars may not seem like much today, but given years or decades, they grow exponentially. Eventually, the growth from compounding can outpace what you're even contributing to savings. Similar to how today's computers are now advanced enough to begin writing their own code through cutting-edge AI systems.</p>
+        <p>Your dollars may not seem like much today, but given years or decades, they grow exponentially. Eventually, the growth from compounding can outpace what you&rsquo;re even contributing to savings. Similar to how today&rsquo;s computers are now advanced enough to begin writing their own code through cutting-edge AI systems.</p>
 
         <h2>Real-World Applications</h2>
 
-        <p>Michael Phelps and Kobe Bryant didn't wake up one day as world-class athletes. Through daily training and relentless focus, they grew their skills from local standouts to national champions and ultimately global icons representing their sports.</p>
+        <p>Michael Phelps and Kobe Bryant didn&rsquo;t wake up one day as world-class athletes. Through daily training and relentless focus, they grew their skills from local standouts to national champions and ultimately global icons representing their sports.</p>
 
-        <p>The same goes for learning. My brother just started high school, and when he told me about his English class, I held back laughter — not at him, but at the remarkable growth that occurs between ninth grade and college.</p>
+        <p>The same goes for learning. My brother just started high school, and when he told me about his English class, I held back laughter &mdash; not at him, but at the remarkable growth that occurs between ninth grade and college.</p>
 
         <p>A freshman high-schooler may struggle to write a one-page essay, while a college junior wrestles with a ten-page paper (ask me how I know!). What feels overwhelming now will one day seem simple, like the shorter assignments that once felt impossible to breeze through.</p>
 
         <h2>The Rule of 72</h2>
 
-        <p>There's a quick way to estimate how long it takes to double your money: the Rule of 72. Divide 72 by your annual rate of return.</p>
+        <p>There&rsquo;s a quick way to estimate how long it takes to double your money: the Rule of 72. Divide 72 by your annual rate of return.</p>
 
         <div class="data-table-wrapper">
             <div class="data-table-title">The Rule of 72</div>
@@ -159,21 +160,21 @@
             </table>
         </div>
 
-        <p>At the S&P 500's historical 10% average, your money doubles roughly every seven years. At the Nasdaq's higher historical growth rate of about 13%, it doubles in just over five years.</p>
+        <p>At the S&amp;P 500&rsquo;s historical 10% average, your money doubles roughly every seven years. At the Nasdaq&rsquo;s higher historical growth rate of about 13%, it doubles in just over five years.</p>
 
-        <p>Investing $100 in the S&P 500 might feel slow at first. For the first two decades, it crawls. But by the later years, each year's growth equals nearly ten times your original investment — even if you never add another cent.</p>
+        <p>Investing $100 in the S&amp;P 500 might feel slow at first. For the first two decades, it crawls. But by the later years, each year&rsquo;s growth equals nearly ten times your original investment &mdash; even if you never add another cent.</p>
 
         <h2>The Power of Time</h2>
 
-        <p>As a college student or young professional, money is scarce, but time is abundant. If you wait until 40 to start investing, you might have more income, but with only twenty years to grow, each dollar compounds into just under $7 by age 60. Start at age 30 and you'll reach about $17 per dollar invested. Start at age 20, and you'll have roughly $45 for every dollar socked away.</p>
+        <p>As a college student or young professional, money is scarce, but time is abundant. If you wait until 40 to start investing, you might have more income, but with only twenty years to grow, each dollar compounds into just under $7 by age 60. Start at age 30 and you&rsquo;ll reach about $17 per dollar invested. Start at age 20, and you&rsquo;ll have roughly $45 for every dollar socked away.</p>
 
-        <p>Combine the consistency of the 25-500 Plan, the tax efficiency of a Roth IRA, and the long-term averages of the S&P 500, and the secret sauce of investing becomes clear. Starting early makes you a millionaire of time. It turns a handful of dollars into the millions you'll need — and want — as your most valuable asset, time, inevitably slips away.</p>
+        <p>Combine the consistency of the 25-500 Plan, the tax efficiency of a Roth IRA, and the long-term averages of the S&amp;P 500, and the secret sauce of investing becomes clear. Starting early makes you a millionaire of time. It turns a handful of dollars into the millions you&rsquo;ll need &mdash; and want &mdash; as your most valuable asset, time, inevitably slips away.</p>
 
         <h2>Feeling Sluggish?</h2>
 
-        <p>The first five to ten years will feel painfully slow. Your $100 might become $110, then $221, and you'll wonder if it's even working. But those years are the foundation. Compounding means that the most significant gains typically occur in the final stretch.</p>
+        <p>The first five to ten years will feel painfully slow. Your $100 might become $110, then $221, and you&rsquo;ll wonder if it&rsquo;s even working. But those years are the foundation. Compounding means that the most significant gains typically occur in the final stretch.</p>
 
-        <p>It's a slow-cooked sauce. It may look the same for hours, but eventually it thickens into the flavor that brings the entire meal together.</p>
+        <p>It&rsquo;s a slow-cooked sauce. It may look the same for hours, but eventually it thickens into the flavor that brings the entire meal together.</p>
 
         <div class="contact-cta">
             Got questions, disagreements, or a money topic you want broken down next? Shoot an email to <a href="mailto:Crawford@awmfinancial.net">Crawford@awmfinancial.net</a> or visit <a href="https://awmfinancial.net">awmfinancial.net</a>.
@@ -183,14 +184,14 @@
             This content is for educational purposes only and is not investment advice. Markets are risky, outcomes vary, and you should always make decisions based on your own situation.
         </div>
 
-        <div class="next-article">
-            <div class="next-label">Back to The Core Curriculum</div>
-            <a href="../core-curriculum.html" class="next-card">
-                <div>
-                    <div class="next-card-title">The Core Curriculum</div>
-                    <div class="next-card-sub">Browse all articles in the series.</div>
-                </div>
-                <div class="next-arrow">→</div>
+        <div class="article-nav">
+            <a href="tcc-3.html" class="prev">
+                <div class="nav-label">&#8592; Previous</div>
+                <div class="nav-title">S&amp;P 500, Dow, Nasdaq: What&rsquo;s the Difference?</div>
+            </a>
+            <a href="../core-curriculum.html" class="next">
+                <div class="nav-label">Back to Curriculum</div>
+                <div class="nav-title">The Core Curriculum</div>
             </a>
         </div>
 
@@ -218,7 +219,7 @@
                 <div>
                     <h4>Legal</h4>
                     <p style="font-size: 0.85rem; color: #a0aec0;">Educational content only. Not financial or investment advice.</p>
-                    <p style="font-size: 0.85rem; color: #a0aec0; margin-top: 0.5rem;">© 2026 AWM Financial LLC. All rights reserved.</p>
+                    <p style="font-size: 0.85rem; color: #a0aec0; margin-top: 0.5rem;">&copy; 2026 AWM Financial LLC. All rights reserved.</p>
                 </div>
             </div>
             <div class="footer-socials">
